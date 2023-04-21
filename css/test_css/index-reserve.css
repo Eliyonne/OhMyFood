@@ -80,9 +80,18 @@ body {
   background-color: white;
 }
 
+.splash {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
 header {
   display: flex;
   flex-direction: column;
+  /*Pour le futur responsive*/
 }
 header .header__image--pc {
   display: none;
