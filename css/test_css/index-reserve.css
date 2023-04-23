@@ -53,11 +53,22 @@ table {
 
 /*couleur principale fond*/
 /*Couleur secondaire fond*/
+/*couleur tertiaire parfois utilisé*/
 /*Couleur pour le dégradé*/
 /*Couleur pour le dégradé*/
 /*fond languette d'ajout et couleur checkmark du menu*/
 /*Couleur de texte nouveau restaurant*/
 /*Fond footeur*/
+/*Les icones et leurs règles*/
+/*couleur*/
+.fa-mobile-screen-button, .fa-list-ul {
+  color: #7e7e7e;
+}
+
+.fa-store {
+  color: #9356DC;
+}
+
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -65,6 +76,7 @@ table {
 
 body {
   max-width: 720px;
+  min-width: 350px;
 }
 
 .Tittle--mobile {
@@ -80,12 +92,32 @@ body {
   background-color: white;
 }
 
-.splash {
+.splash__button {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  border-radius: 25px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border: #9356DC 1px solid;
+  width: 33%;
+  min-width: 210px;
+  padding: 13px 12px;
+  font-size: 16px;
+  color: white;
   justify-content: center;
-  text-align: center;
+}
+
+.splash__button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+.onboard__etape__item {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background: #F7F7F7;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
 }
 
 header {
@@ -111,6 +143,32 @@ header .header__subtittle {
 header .header__subtittle .header__subtexte {
   margin: 5px 0px;
   padding: 15px 0px;
+  font-weight: bold;
+}
+
+.splash {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0px 0px 20px 0px;
+  padding: 40px 0px 60px 0px;
+  background-color: #F7F7F7;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.splash__tittle {
+  font-size: 24px;
+  font-weight: 700;
+  width: 70%;
+  margin-bottom: 5px;
+}
+.splash__subtexte {
+  font-size: 18px;
+  font-weight: 300;
+  width: 80%;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=index-reserve.css.map */

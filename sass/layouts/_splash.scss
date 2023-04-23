@@ -2,6 +2,23 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin: 0px 0px 20px 0px;
+    padding: 40px 0px 60px 0px;
+    background-color: #F7F7F7;
     justify-content: center;
+    align-items: center;
     text-align: center;
+    gap: 10px;
+    &__tittle{
+        font-size: 24px;
+        font-weight: 700;
+        width: 70%;
+        margin-bottom: 5px;
+    }
+    &__subtexte{
+        font-size: 18px;
+        font-weight: 300;
+        width: 80%;
+        margin-bottom: 10px;
+    }
 }
