@@ -1,10 +1,21 @@
 /*Les icones et leurs règles*/
 
 /*couleur*/
-.fa-mobile-screen-button, .fa-list-ul {
+.onboard__etape__icone {
     color: #7e7e7e;
+    padding: 0px 10px;
 }
 
-.fa-store {
-    color: $couleur_primaire;
+.fa-heart{
+    font-size: 18px;
 }
+
+.fa-ustensils {
+    font-size: 15px;
+}
+
+.fa-handshake-angle{
+    font-size: 12px;
+}
+
+

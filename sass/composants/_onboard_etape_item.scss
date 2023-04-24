@@ -5,4 +5,30 @@
     background: #F7F7F7;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
+    list-style: none;
+    align-items: center;
+    padding-left: 50px;
+    font-size: 16px;
+    padding: 20px;
+    
+}
+
+.onboard__etape__item:hover{
+    .onboard__etape__icone {
+        color: $couleur_primaire;
+    }
+    
+}
+
+
+.onboard__etape__item::before {
+    counter-increment: etape 1;
+    content: counter(etape);
+    position: absolute;
+    left: -10px;
+    font-size: 14px;
+    background-color: $couleur_primaire;
+    border-radius: 50px;
+    color: white;
+    padding: 3px 6px;
 }
