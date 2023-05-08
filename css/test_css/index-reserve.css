@@ -60,7 +60,10 @@ table {
 /*Couleur de texte nouveau restaurant*/
 /*Fond footeur*/
 /*Les icones et leurs règles*/
-/*couleur*/
+.fa-location-dot {
+  font-size: 14px;
+}
+
 .onboard__etape__icone {
   color: #7e7e7e;
   padding: 0px 10px;
@@ -84,14 +87,77 @@ table {
 }
 
 body {
-  max-width: 1024px;
   min-width: 350px;
 }
 
+.loader {
+  position: fixed;
+  display: flex;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(226, 253, 253);
+  animation: appear 5s ease-in-out 0s 1;
+  overflow: hidden;
+  z-index: 200;
+}
+
+.spin {
+  box-sizing: border-box;
+  width: 200px;
+  height: 100px;
+  position: relative;
+  line-height: 100px;
+}
+.spin::before {
+  padding: 10px;
+  content: "";
+  border: 4px transparent solid;
+  border-radius: 50px;
+  position: absolute;
+  top: 38px;
+  left: -40px;
+  border-top-color: #99E2D0;
+  animation: spin 2s linear 0.5s 4;
+}
+
+@keyframes retract {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 1px;
+    height: 1px;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
 .Tittle--mobile {
   display: flex;
   justify-content: center;
-  width: 100%;
   font-family: "Shrikhand";
   font-size: 30px;
   font-weight: 400;
@@ -99,6 +165,7 @@ body {
   padding: 15px 0px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
   background-color: white;
+  position: relative;
 }
 
 .splash__button {
@@ -151,6 +218,7 @@ body {
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: #FFFFFF;
@@ -158,6 +226,22 @@ body {
   border-radius: 15px;
   box-sizing: border-box;
   border-radius: 15px;
+}
+
+.card__etiquette::before {
+  position: absolute;
+  content: "Nouveau";
+  color: #008766;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  width: 70px;
+  height: 20px;
+  top: 5px;
+  right: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
 }
 
 .card__image {
@@ -193,6 +277,26 @@ body {
   font-weight: 300;
 }
 
+.card__favoris .fa-solid {
+  display: none;
+}
+.card__favoris .fa-regular {
+  display: inline;
+}
+
+.card__favoris:hover .fa-solid {
+  display: inline;
+  background: -moz-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: -webkit-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card__favoris:hover .fa-regular {
+  display: none;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -207,16 +311,32 @@ header .header__subtittle {
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 15px;
   font-size: 16px;
   font-weight: 500;
   background: #EAEAEA;
-  z-index: -1;
 }
 header .header__subtittle .header__subtexte {
   margin: 5px 0px;
   padding: 15px 0px;
   font-weight: bold;
+}
+header .header__subtittle .header__formloc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #EAEAEA;
+  justify-content: center;
+  padding: 15px 0px 15px;
+  margin: 0px 0px 0px 50px;
+  gap: 10px;
+}
+header .header__subtittle .header__formloc__localisation {
+  border: none;
+  background-color: #EAEAEA;
+  font-weight: bold;
+}
+header .header__subtittle .header__formloc__localisation:focus {
+  outline: none;
 }
 
 .splash {
@@ -253,6 +373,8 @@ header .header__subtittle .header__subtexte {
 }
 .onboard .onboard__tittle {
   display: flex;
+  font-size: 24px;
+  font-weight: 700;
 }
 .onboard .onboard__etape {
   display: flex;
@@ -272,10 +394,12 @@ header .header__subtittle .header__subtexte {
   gap: 30px;
   width: 80%;
 }
-.restaurantcard__titre {
+.restaurantcard .restaurantcard__titre {
+  margin: 50px auto;
   font-size: 24px;
   font-weight: 700;
   padding-bottom: 10px;
+  width: 80%;
 }
 
 .footer {
@@ -308,6 +432,42 @@ header .header__subtittle .header__subtexte {
 .footer__link__texte {
   font-size: 16px;
   font-weight: 400;
+}
+
+@media screen and (min-width: 1024px) {
+  .onboard__etape {
+    flex-direction: row !important;
+    gap: 80px !important;
+  }
+  .onboard__etape__item {
+    padding: 20px 40px;
+    width: 28%;
+  }
+  .onboard__etape__icone {
+    padding: 0px 20px 0px 5px;
+  }
+  .restaurantcard__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    gap: 80px;
+  }
+  .card {
+    min-width: 45%;
+  }
+  .card__image {
+    width: 100%;
+    height: 220px;
+  }
+  .footer__container {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .footer__link {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
 }
 
 /*# sourceMappingURL=index-reserve.css.map */

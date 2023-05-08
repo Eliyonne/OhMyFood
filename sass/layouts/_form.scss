@@ -1,0 +1,19 @@
+.header__formloc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #EAEAEA;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    gap: 10px;
+    &__localisation {
+        border: none;
+        background-color: #EAEAEA;
+    }
+    
+    &__localisation:focus {
+        outline: none;
+    }
+}

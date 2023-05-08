@@ -1,0 +1,11 @@
+@mixin fa-heart--colorchange {
+    color: $couleur_primaire;
+}
+
+@mixin fa-heart--basecolor{
+    background-color: transparent;
+}
+
+@mixin fa-heart--fontcolorchange {
+    color: $couleur_primaire;
+}

@@ -4,23 +4,43 @@ header {
     
     /*Pour le futur responsive*/
     .header__image--pc {
-      display: none;
+        display: none;
     }
+
     .header__subtittle {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         width: 100%;
-        gap: 15px;
+        // gap: 15px;
         font-size: 16px;
         font-weight: 500;
         background: #EAEAEA;
-        z-index: -1;
         .header__subtexte {
             margin: 5px 0px;
             padding: 15px 0px;
             font-weight: bold;
         }
+        .header__formloc {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: #EAEAEA;
+            justify-content: center;
+            padding: 15px 0px 15px;
+            margin: 0px 0px 0px 50px;
+            gap: 10px;
+            &__localisation {
+                border: none;
+                background-color: #EAEAEA;
+                font-weight: bold;
+            }
+            
+            &__localisation:focus {
+                outline: none;
+            }
+        }
+        
     }
 }

@@ -8,6 +8,8 @@
 
     .onboard__tittle{
         display: flex;
+        font-size: 24px;
+        font-weight: 700;
         
     }
     .onboard__etape {
@@ -15,9 +17,6 @@
         flex-direction: column;
         counter-reset: etape;
         gap: 20px;
-        
     }
 
 }
-
-

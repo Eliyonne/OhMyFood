@@ -1,4 +1,5 @@
 .card{
+    position: relative;
     display: flex;
     flex-direction: column;
     background: #FFFFFF;
@@ -6,7 +7,26 @@
     border-radius: 15px;
     box-sizing: border-box;
     border-radius: 15px;
+}
+
+.card__etiquette {
     
+    &::before{
+        position: absolute;
+        content: "Nouveau";
+        color: $couleur_new_shop;
+        border-radius: 2px;
+        background-color: $couleur_tertiaire;
+        width: 70px;
+        height: 20px;
+        top: 5px;
+        right: 5px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        text-align: center;
+
+    }
 }
 
 .card__image{
@@ -42,3 +62,29 @@
     font-size: 17px;
     font-weight: 300;
 }
+
+.card__favoris{
+    .fa-solid {
+        display: none;
+    }
+    .fa-regular {
+        display: inline;
+    }
+}
+.card__favoris:hover{
+    .fa-solid {
+        display: inline;
+        background:-moz-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); 
+        background: -webkit-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); 
+        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+    }
+    .fa-regular {
+        display: none;
+    }
+}
+
+
