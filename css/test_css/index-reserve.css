@@ -87,7 +87,7 @@ table {
 }
 
 body {
-  min-width: 350px;
+  min-width: 340px;
 }
 
 .loader {
@@ -99,7 +99,8 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(226, 253, 253);
-  animation: appear 5s ease-in-out 0s 1;
+  animation: retract 1s linear 4s 1 forwards;
+  animation: appear 7s ease-in-out 0s 1 forwards;
   overflow: hidden;
   z-index: 200;
 }
@@ -120,17 +121,17 @@ body {
   top: 38px;
   left: -40px;
   border-top-color: #99E2D0;
-  animation: spin 2s linear 0.5s 4;
+  animation: spin 1s linear 0s 4;
 }
 
 @keyframes retract {
   0% {
-    width: 100%;
-    height: 100%;
+    opacity: 0;
   }
   100% {
-    width: 1px;
-    height: 1px;
+    top: 0;
+    left: 0;
+    scale: 0;
   }
 }
 @keyframes appear {
@@ -407,7 +408,6 @@ header .header__subtittle .header__formloc__localisation:focus {
   flex-direction: column;
   background: #353535;
   color: white;
-  margin-bottom: 10px;
 }
 .footer__container {
   width: 80%;
@@ -468,6 +468,35 @@ header .header__subtittle .header__formloc__localisation:focus {
     flex-direction: row;
     gap: 10px;
   }
+}
+.header__restaurants {
+  display: flex;
+  flex-direction: row;
+}
+
+.hero__restaurant {
+  position: absolute;
+  width: 100%;
+  min-height: 280px;
+  z-index: -1;
+}
+.hero__restaurant__image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.container__menu {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 250px auto 0px auto;
+  align-items: center;
+  justify-items: center;
+  background-color: #F7F7F7;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 }
 
 /*# sourceMappingURL=index-reserve.css.map */
