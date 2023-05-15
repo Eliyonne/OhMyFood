@@ -1,49 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
-
-
-/*General use*/
-* {
-    font-family: 'Roboto', sans-serif;
-}
-
-body {
-    max-width: 720px;
-}
-
-.Tittle--mobile {
-        font-family: 'Shrikhand';
-        font-size: 30px;
-        font-weight: 400;
-        margin: 10px 0px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-}
-
-
-/*Header*/
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .header__image--pc {
-      display: none;
-    }
-    .header__subtittle {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 15px;
-        font-size: 16px;
-        font-weight: 500;
-        background: #EAEAEA;
-        .header__subtexte {
-            margin: 5px 0px;
-        }
-    }
-}
-
-
-
-
+@import "./tier/reset";
+@import "./utils/color-var";
+@import "./utils/mixins";
+@import "./utils/icons";
+@import "./utils/animations";
+@import "./base/fondation";
+@import "./composants/loader";
+@import "./composants/Tittle";
+@import "./composants/splash__button";
+@import "./composants/onboard_etape_item";
+@import "./composants/cards";
+@import "./composants/menu__plat__item";
+@import "./layouts/header_index";
+@import "./layouts/splash";
+@import "./layouts/onboard";
+@import "./layouts/restaurant_card";
+@import "./layouts/footer";
+@import "./pages/index__desktop";
+@import "./pages/restaurants__menu";

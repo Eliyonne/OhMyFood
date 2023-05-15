@@ -1,0 +1,96 @@
+.menu__plats__item {
+    background: #fff;
+    border-radius: .75rem;
+    padding: 1rem 1rem;
+    display: flex;
+    box-shadow: 0.25rem 0.25rem 1rem #0000001a;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 1rem 0; 
+    max-width: 100%;
+    animation: checkMenu 2s;
+    animation-timing-function: cubic-bezier(.67,.22,.35,.86);
+    animation-fill-mode: both;
+    transform: scale(0);
+    
+
+
+    .plats__item__description {
+        flex: 1;
+        overflow: hidden;
+        justify-content: space-between;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        .plats__item__titre {
+            
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-weight: 500;
+            font-size: 18px;
+            
+        }
+
+        .plats__item__texte {
+            
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+
+    .prix {
+        font-weight: 700;
+        font-size: 16px;
+        display: flex;
+        align-items:flex-end;
+        padding-left: 30px;
+        
+        
+    }
+
+
+
+
+    .plats__item--validation {
+        background: #99e2d0;
+        margin: -1rem -5rem -1rem 1rem;
+        width: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-duration: .5s;
+        .plats__item--check {
+            width: 1.6rem;
+            height: 1.6rem;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            border-radius: 100px;      
+        }
+    }
+    &:hover {
+            .plats__item--validation {
+                margin-right: -1rem;
+            }
+        
+        
+    }
+}
+
+.animate--1{
+    animation-delay: 0.7s;
+}
+
+.animate--2{
+    animation-delay: 1s;
+}
+
+.animate--3{
+    animation-delay: 1.2s;
+}

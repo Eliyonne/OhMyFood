@@ -1,6 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
 .header__restaurants {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    background-color: white;
+    a{
+        padding: 10px;
+    }
+    .fa-arrow-left{
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .Tittle__pc--restaurant {
+        display: none;
+    }
 }
 
 .hero__restaurant {
@@ -28,5 +44,106 @@
     background-color: $third_back_color;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    
+
+    .menu__titre{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .titre__restaurant{
+        font-family: 'Shrikhand';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 28px;
+        margin: 20px 10px;
+    }
+    .restaurant__fav{
+        .fa-solid {
+            display: none;
+            
+        }
+        .fa-regular {
+            display: inline;
+        }
+    }
+    .restaurant__fav:hover {
+        .fa-solid {
+            display: inline;
+            opacity: 1;
+            background:-moz-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); 
+            background: -webkit-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); 
+            background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+            
+        }
+        .fa-regular {
+            display: none;
+        }
+    }
 }
+
+.menu__plats {
+    animation: Menuappear 0.7s;
+    margin: 15px 0px;
+    width: 80%;
+    .menu__section__titre {
+        font-size: 300;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+        position: relative;
+        &::before{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            content: "";
+            width: 30px;
+            height: 3px;
+            background-color: $couleur_tertiaire;
+
+        }
+
+    }
+}
+
+.button__commander{
+    margin: 10px 0px 50px 0px;
+    min-width: none !important;
+    padding: 10px 30px !important;
+    width: auto !important;
+}
+
+
+@media screen and (min-width: 1024px) {
+    
+    .Tittle__mobile--restaurant{
+        display: none;
+    }
+
+    .Tittle__pc--restaurant {
+        display: flex !important;
+        height: 36px;
+        width: auto;
+        object-fit: cover;
+        object-position: center;
+        align-items: center !important;
+    }
+
+    .Tittle__pc__container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+
+    .prix {
+        padding: 0px 0px 0px 15rem !important;
+    }
+
+}
+

@@ -2,14 +2,15 @@
 @import "./utils/color-var";
 @import "./utils/mixins";
 @import "./utils/icons";
+@import "./utils/animations";
 @import "./base/fondation";
 @import "./composants/loader";
 @import "./composants/Tittle";
 @import "./composants/splash__button";
 @import "./composants/onboard_etape_item";
 @import "./composants/cards";
+@import "./composants/menu__plat__item";
 @import "./layouts/header_index";
-// @import "./layouts/_form.scss";
 @import "./layouts/splash";
 @import "./layouts/onboard";
 @import "./layouts/restaurant_card";

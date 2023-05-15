@@ -1,5 +1,28 @@
 @media screen and (min-width:1024px) {
 
+    .Tittle__mobile--index{
+        display: none !important;
+    }
+
+    .Tittle__pc--index {
+        display: flex !important;
+        height: 36px;
+        width: auto;
+        object-fit: cover;
+        object-position: center;
+        background-color: white;
+        align-items: center !important;
+        
+    }
+
+    .Tittle__pc__container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 15px 0px;
+        box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.15);
+        
+    }
     .onboard__etape{
         flex-direction: row !important;
         gap: 80px !important;
