@@ -1,3 +1,4 @@
+//Positionnement du loader, init de l'animation 
 .loader {
     position: fixed;
     height: 100%;
@@ -15,6 +16,7 @@
     justify-content: center
 }
 
+//Init des boules et de leur animations
 .loader__boule {
     height: 1rem;
     width: 1rem;
@@ -23,78 +25,27 @@
     animation-iteration-count: 1
 }
 
+//Le conteneur des boules et son placement au milieu de l'écran
 .loader__BouleContainer {
     display: flex;
     width: 5rem;
     justify-content: space-between
 }
 
+//Style boule 1
 .loader__boule--1 {
     background-color: #9356dc
 }
 
+//Style boule 2
 .loader__boule--2 {
     background-color: #ff79da;
     animation-delay: .25s
 }
 
+//Style boule 3
 .loader__boule--3 {
     background-color: #99e2d0;
     animation-delay: .5s
 }
 
-// .loader{
-//     position: fixed;
-//     display: flex;
-//     opacity: 0;
-//     width:100%;
-//     height: 100%;
-//     justify-content: center;
-//     align-items: center;
-//     background-color: rgb(226, 253, 253);
-//     animation: appear 7s ease-in-out 0s 1 forwards;
-//     overflow: hidden;
-//     z-index: 200;
-    
-// }
-
-// .spin{
-//     box-sizing: border-box;
-//     width: 200px;
-//     height: 100px;
-//     position: relative;
-//     line-height: 100px;
-//     &::before{
-//         padding: 10px;
-//         content: "";
-//         border: 4px transparent solid;
-//         border-radius: 50px;
-//         position: absolute;
-//         top: 38px;
-//         left: -40px;
-//         border-top-color: #99E2D0;
-//         animation: spin 1s linear 0s 2;
-        
-//     }
-// }
-
-
-
-        
-// @keyframes appear {
-//         0% {opacity: 1;}
-//         20% {opacity: 1;}
-//         100% {
-//             opacity: 0;
-//             z-index: -2000;
-//         }
-//     }
-
-// @keyframes spin {
-//         0% {rotate: 0deg;}
-//         50%{rotate: 180deg;}
-//         100% {
-//             rotate: 360deg;
-//             z-index: -2000;
-//         }
-//     }

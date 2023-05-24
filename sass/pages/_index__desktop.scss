@@ -1,9 +1,11 @@
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1024px) { //Responsive version desktop
 
+    //On inverse les titres
     .Tittle__mobile--index{
         display: none !important;
     }
 
+    //Affichage du titre version Desktop
     .Tittle__pc--index {
         display: flex !important;
         height: 36px;
@@ -23,6 +25,12 @@
         box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.15);
         
     }
+    //On change la taille du bouton commander
+    .splash__button{
+        max-width: 18% !important;
+    }
+
+    //On augmente la taille des éléments et de l'espacement entre les éléments du onboard
     .onboard__etape{
         flex-direction: row !important;
         gap: 80px !important;
@@ -39,6 +47,7 @@
         padding: 0px 20px 0px 5px;
     }
 
+    //On augmente le gap entre les cartes
     .restaurantcard__container {
         flex-direction: row;
         flex-wrap: wrap;
@@ -48,7 +57,7 @@
         
         
     }
-
+    //On augmente la taille minimal des cartes
     .card{
         min-width: 45%;
         &__image{
@@ -57,11 +66,13 @@
         }
     }
 
+    //On change l'affichage du footer pour le mettre en ligne qu'on inverse
     .footer__container{
         flex-direction: row-reverse;
         align-items: center;
     }
 
+    //Le style des liens
     .footer__link {
         display: flex;
         flex-direction: row;

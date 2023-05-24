@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+//Style du header et de la flèche de retour
 .header__restaurants {
     display: flex;
     flex-direction: row;
@@ -14,11 +15,12 @@
         font-size: 20px;
         font-weight: 900;
     }
-    .Tittle__pc--restaurant {
+    .Tittle__pc--restaurant { //On désactive l'affichage du titre de la version Desktop
         display: none;
     }
 }
 
+//Style du héro on le place de tel sorte que l'image puisse être surplomber
 .hero__restaurant {
     position: absolute;
     width: 100%;
@@ -33,7 +35,7 @@
 }
 
 
-
+//Container du menu général
 .container__menu{
     display: flex;
     flex-direction: column;
@@ -45,7 +47,7 @@
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 
-    .menu__titre{
+    .menu__titre{ //Containeur du titre et de l'icone favoris
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -60,7 +62,7 @@
         font-size: 28px;
         margin: 20px 10px;
     }
-    .restaurant__fav{
+    .restaurant__fav{ //icone favoris
         .fa-solid {
             display: none;
             
@@ -69,7 +71,7 @@
             display: inline;
         }
     }
-    .restaurant__fav:hover {
+    .restaurant__fav:hover { //remplissage de l'icone favoris
         .fa-solid {
             display: inline;
             opacity: 1;
@@ -79,6 +81,7 @@
             -webkit-background-clip: text;
             -moz-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
             
             
         }
@@ -88,12 +91,13 @@
     }
 }
 
-.menu__plats {
+//Style des catégories du menu (entrées, plats, desserts) et init de l'animation
+.menu__plats { 
     animation: Menuappear 0.7s;
     margin: 15px 0px;
     width: 80%;
     .menu__section__titre {
-        font-size: 300;
+        font-weight: 300;
         text-transform: uppercase;
         padding-bottom: 10px;
         position: relative;
@@ -111,20 +115,22 @@
     }
 }
 
+//Style du bouton commander
 .button__commander{
     margin: 10px 0px 50px 0px;
-    min-width: none !important;
+    min-width: none;
     padding: 10px 30px !important;
     width: auto !important;
 }
 
-
+//Début du responsive pour la version desktop
 @media screen and (min-width: 1024px) {
-    
+    //On change le titre entre la version mobile et desktop
     .Tittle__mobile--restaurant{
         display: none;
     }
 
+    //On affiche la version desktop
     .Tittle__pc--restaurant {
         display: flex !important;
         height: 36px;
@@ -140,7 +146,7 @@
         width: 100%;
     }
 
-
+    //On change le padding du prix pour avoir un plus grand item
     .prix {
         padding: 0px 0px 0px 15rem !important;
     }

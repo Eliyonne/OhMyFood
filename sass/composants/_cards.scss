@@ -1,3 +1,5 @@
+
+//On commence par définir un style pour la carte entière (son "enveloppe")
 .card{
     position: relative;
     display: flex;
@@ -9,6 +11,7 @@
     border-radius: 15px;
 }
 
+//On définit l'étiquette qui s'affichera sur les nouveaux restaurants
 .card__etiquette {
     
     &::before{
@@ -29,6 +32,7 @@
     }
 }
 
+//Style de l'image de la carte
 .card__image{
     height: 180px;
     width: 100%;
@@ -38,6 +42,7 @@
     border-top-left-radius: 15px;
 }
 
+//Style du conteneur pour la partie texte et icone
 .card__description{
     display: flex;
     flex-direction: row;
@@ -47,6 +52,7 @@
 
 }
 
+//Style du conteneur pour le texte 
 .card__subtexte {
     display: flex;
     flex-direction: column;
@@ -54,17 +60,20 @@
     gap: 5px;
 }
 
+//Style du titre
 .card__titre {
     font-size: 18px;
     font-weight: 700;
 }
 
+//Style du texte descriptif
 .card__subdescription {
     font-size: 17px;
     font-weight: 300;
 }
 
-.card__favoris{
+//Style de l'icone favoris
+.card__favoris{ 
     .fa-solid {
         display: none;
         
@@ -73,7 +82,7 @@
         display: inline;
     }
 }
-.card__favoris:hover{
+.card__favoris:hover{ //remplissage au survol
     .fa-solid {
         display: inline;
         opacity: 1;

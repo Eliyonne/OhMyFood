@@ -1,3 +1,4 @@
+//Enveloppe et style de l'item
 .onboard__etape__item {
     display: flex;
     flex-direction: row;
@@ -10,9 +11,10 @@
     padding-left: 50px;
     font-size: 16px;
     padding: 20px;
-    // z-index: -2;
+    
 }
 
+//Changement de la couleur de l'icone au survol
 .onboard__etape__item:hover{
     .onboard__etape__icone {
         color: $couleur_primaire;
@@ -20,7 +22,7 @@
     
 }
 
-
+//Init de l'icone numéroté et incrémenté
 .onboard__etape__item::before {
     counter-increment: etape 1;
     content: counter(etape);

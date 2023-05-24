@@ -2,16 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
+//On à importer les éléments nécessaires au site, les polices, les éléments du font awesome
 
+
+//On donne des règles de bases à l'ensemble du site en appliquant une police que l'on modifiera individuelement.
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
+//On donne une taille d'écran minimum pour garantir un affichage correcte
 body {
     min-width: 340px;
 }
 
+//On donne un style basique aux liens du site
 a {
     text-decoration: none;
     color: black;

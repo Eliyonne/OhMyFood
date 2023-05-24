@@ -1,3 +1,4 @@
+//Container et son style pour les cards
 .restaurantcard {
     background-color: $third_back_color;
     padding: 20px 0px 30px 0px;
@@ -8,7 +9,7 @@
         gap: 30px;
         width: 80%;
     }
-    .restaurantcard__titre {
+    .restaurantcard__titre { //Style du titre de la section
         margin: 50px auto;
         font-size: 24px;
         font-weight: 700;
