@@ -3,7 +3,9 @@
     flex-direction: column;
     background: #353535;
     color: white;
-    
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
     &__container{
         width: 80%;
         display: flex;

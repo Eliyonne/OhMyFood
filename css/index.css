@@ -539,6 +539,9 @@ header .header__subtittle .header__formloc__localisation:focus {
   flex-direction: column;
   background: #353535;
   color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 }
 .footer__container {
   width: 80%;
