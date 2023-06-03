@@ -421,6 +421,7 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 100px;
+  color: #99e2d0;
 }
 .menu__plats__item:hover .plats__item--validation {
   margin-right: -1rem;
@@ -735,7 +736,6 @@ header .header__subtittle .header__formloc__localisation:focus {
 
 .button__commander {
   margin: 10px 0px 50px 0px;
-  min-width: none;
   padding: 10px 30px !important;
   width: auto !important;
 }
